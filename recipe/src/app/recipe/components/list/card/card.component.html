@@ -1,0 +1,14 @@
+<div class="card rounded">
+    <img src="https://www.sprinklesomesugar.com/wp-content/uploads/2017/11/IMG_4730-2.jpg" class="card-img-top" alt="">
+    <div class="card-body">
+        <h5 class="card-title">
+            {{ recipe.name }}
+        </h5>
+        <div class="d-flex d-flex justify-content-between align-items-center">
+            <span class="badge bg-warning text-dark badge-padding">
+                {{ recipe.categoryLabel }}
+            </span>
+            <app-star [starQuantity]="recipe.difficulty"></app-star>
+        </div>
+    </div>
+</div>

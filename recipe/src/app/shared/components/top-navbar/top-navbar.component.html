@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light container">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbarCollapsing()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a id="logo-top-navbar" class="navbar-brand" href="#">Recipes</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03" [class.collapse]="isNavbarCollapsed">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
