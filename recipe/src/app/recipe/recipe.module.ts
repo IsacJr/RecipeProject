@@ -14,6 +14,7 @@ import { WelcomeComponent } from './components/list/welcome/welcome.component';
 import { CategoriesComponent } from './components/list/categories/categories.component';
 import { StarComponent } from './components/list/star';
 import { BadgeComponent } from './components/list/badge/badge.component';
+import { CardSimpleComponent } from './components/list/card-simple/card-simple.component';
 
 
 
@@ -28,7 +29,8 @@ import { BadgeComponent } from './components/list/badge/badge.component';
     WelcomeComponent,
     CategoriesComponent,
     StarComponent,
-    BadgeComponent
+    BadgeComponent,
+    CardSimpleComponent
   ],
   imports: [
     CommonModule,

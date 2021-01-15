@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CategoryModel } from 'src/app/recipe/models/CategoryModel';
 
 @Component({
   selector: 'app-categories',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
+  @Input() categoryList: CategoryModel[];
+  
   constructor() { }
 
   ngOnInit(): void {

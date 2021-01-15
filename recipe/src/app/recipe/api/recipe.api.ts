@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
 
 import { MockedRecipe } from '../mock/MockedRecipe';
 import { RecipeModel } from '../models/RecipeModel';
+import { CategoryModel } from '../models/CategoryModel';
+import { MockedCategory } from '../mock/MockedCategory';
 
 
 
@@ -25,5 +27,12 @@ export class RecipeAPI {
             observable.next(recipe);
             observable.complete();
         })
+    }
+
+    getAllCategories(): Observable<CategoryModel[]>{
+        return new Observable(observable => {
+            observable.next(MockedCategory);
+            observable.complete();
+        });
     }
 }

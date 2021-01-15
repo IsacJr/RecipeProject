@@ -2,6 +2,7 @@ import { RecipeAPI } from './api/recipe.api';
 import { Observable } from 'rxjs/Observable';
 import { RecipeModel } from './models/RecipeModel';
 import { Injectable } from '@angular/core';
+import { CategoryModel } from './models/CategoryModel';
 
 @Injectable({
     providedIn: 'root'
@@ -12,5 +13,9 @@ export class RecipeFacade {
 
     getAllRecipe(): Observable<RecipeModel[]>{
         return this.recipeApi.getAllRecipes();
+    }
+
+    getAllCategory(): Observable<CategoryModel[]>{
+        return this.recipeApi.getAllCategories();
     }
 }
