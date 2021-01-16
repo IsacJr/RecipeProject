@@ -9,10 +9,11 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-  faArrowLeft = faArrowLeft;
-  faArrowRight = faArrowRight;
 
   @Input() categoryList: CategoryModel[];
+
+  faArrowLeft = faArrowLeft;
+  faArrowRight = faArrowRight;
   
   constructor() { }
 

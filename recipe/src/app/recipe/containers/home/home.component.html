@@ -7,7 +7,8 @@
         <app-categories [categoryList]="categoryList"></app-categories>
     </div>
 
-    <div id="list-section">
-        <app-section [recipeList]="recipeList"></app-section>
+    <div id="list-spotlight">
+        <app-spotlight [recipeSpotlightList]="recipeList.slice(0, 4)"></app-spotlight>
     </div>
+
 </div>

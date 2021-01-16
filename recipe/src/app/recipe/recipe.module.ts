@@ -17,6 +17,8 @@ import { BadgeComponent } from './components/list/badge/badge.component';
 import { CardSimpleComponent } from './components/list/card-simple/card-simple.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './containers/contact/contact.component';
+import { SpotlightComponent } from './components/list/spotlight/spotlight.component';
+import { HeadComponent } from './components/detail/head/head.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ContactComponent } from './containers/contact/contact.component';
     StarComponent,
     BadgeComponent,
     CardSimpleComponent,
-    ContactComponent
+    ContactComponent,
+    SpotlightComponent,
+    HeadComponent
   ],
   imports: [
     CommonModule,
