@@ -1,19 +1,20 @@
 import { Routes } from '@angular/router';
 
 import { 
-    ListComponent,
+    HomeComponent,
     DetailComponent,
     NewComponent
 } from './containers'
+import { ContactComponent } from './containers/contact/contact.component';
 
 export const RecipeRoutes: Routes = [
     {
         path: 'recipes',
-        redirectTo: 'recipes/list'
+        redirectTo: 'recipes/home'
     },
     {
-        path: 'recipes/list',
-        component: ListComponent
+        path: 'recipes/home',
+        component: HomeComponent
     },
     {
         path: 'recipes/detail',
@@ -22,5 +23,9 @@ export const RecipeRoutes: Routes = [
     {
         path: 'recipes/new',
         component: NewComponent
+    },
+    {
+        path: 'recipes/contact',
+        component: ContactComponent
     }
 ]

@@ -5,11 +5,11 @@ import { RecipeFacade } from '../../recipe.facade';
 import { CategoryModel } from '../../models/CategoryModel';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class ListComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   recipeList: RecipeModel[];
   categoryList: CategoryModel[];

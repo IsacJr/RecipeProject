@@ -6,7 +6,7 @@ import { RecipeRoutes } from './recipe';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'recipes/list',
+        redirectTo: 'recipes/home',
         pathMatch: 'full'
     },
     ...RecipeRoutes

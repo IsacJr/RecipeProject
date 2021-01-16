@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CategoryModel } from 'src/app/recipe/models/CategoryModel';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-categories',
@@ -7,6 +9,8 @@ import { CategoryModel } from 'src/app/recipe/models/CategoryModel';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
+  faArrowLeft = faArrowLeft;
+  faArrowRight = faArrowRight;
 
   @Input() categoryList: CategoryModel[];
   

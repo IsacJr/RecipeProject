@@ -1,3 +1,3 @@
 export * from './detail';
-export * from './list';
+export * from './home';
 export * from './new';

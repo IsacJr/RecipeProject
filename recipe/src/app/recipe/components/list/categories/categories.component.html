@@ -1,12 +1,16 @@
 <div>
-    <div class="d-flex justify-content-between align-items-center">
+    <div id="categories-title-navigation" class="d-flex justify-content-between align-items-center">
         <h2>Categories</h2>
-        <div class="d-flex flex-row-reverse">
-            <button class="btn btn-outline-warning"></button>
-            <button class="btn btn-outline-warning"></button>
+        <div class="d-flex">
+            <a id="categories-arrow-left" class="btn btn-outline-warning rounded-circle">
+                <fa-icon [icon]="faArrowLeft"></fa-icon>
+            </a>
+            <a id="categories-arrow-right" class="btn btn-outline-warning rounded-circle">
+                <fa-icon [icon]="faArrowRight"></fa-icon>
+            </a>
         </div>
     </div>
-    <div class="d-flex">
+    <div class="d-flex justify-content-between">
         <div class="card-margin" *ngFor="let category of categoryList">
             <app-card-simple [category]="category"></app-card-simple>
         </div>

@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
-import { ListComponent } from './containers/list';
+import { HomeComponent } from './containers/home';
 import { DetailComponent } from './containers/detail';
 import { NewComponent } from './containers/new';
 import { CardComponent } from './components/list/card/card.component';
@@ -15,13 +15,12 @@ import { CategoriesComponent } from './components/list/categories/categories.com
 import { StarComponent } from './components/list/star';
 import { BadgeComponent } from './components/list/badge/badge.component';
 import { CardSimpleComponent } from './components/list/card-simple/card-simple.component';
-
-
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ContactComponent } from './containers/contact/contact.component';
 
 @NgModule({
   declarations: [
-    ListComponent,
+    HomeComponent,
     DetailComponent,
     NewComponent,
     CardComponent,
@@ -30,12 +29,14 @@ import { CardSimpleComponent } from './components/list/card-simple/card-simple.c
     CategoriesComponent,
     StarComponent,
     BadgeComponent,
-    CardSimpleComponent
+    CardSimpleComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [
     RecipeFacade,
