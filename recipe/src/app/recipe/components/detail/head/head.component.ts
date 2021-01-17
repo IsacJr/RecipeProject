@@ -8,10 +8,7 @@ import { RecipeModel } from 'src/app/recipe/models/RecipeModel';
 })
 export class HeadComponent implements OnInit {
 
-  recipe: RecipeModel = {
-    id: 1, name: "Donuts", category: 1, categoryLabel: "Deserts", numberOfPeopleServes: 4, difficulty: 2, difficultyLabel: "1",
-    ingredients: ["ingredient 1", "ingredient 2", "ingredient 3"], steps: ["step 1", "step 2", "step 3"]
-  };
+  @Input() recipe: RecipeModel;
 
   constructor() { }
 

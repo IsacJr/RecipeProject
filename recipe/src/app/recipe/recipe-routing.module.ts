@@ -17,7 +17,7 @@ export const RecipeRoutes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'recipes/detail',
+        path: 'recipes/detail/:id',
         component: DetailComponent
     },
     {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { RecipeModel } from 'src/app/recipe/models/RecipeModel';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,6 +10,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 export class SpotlightComponent implements OnInit {
 
   @Input() recipeSpotlightList: RecipeModel[];
+  @Output() routerDetailEvent = new EventEmitter<number>();
 
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;
@@ -17,6 +18,10 @@ export class SpotlightComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleCardClicked(event:any) {
+    this.routerDetailEvent.emit(event);
   }
 
 }

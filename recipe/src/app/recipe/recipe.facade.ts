@@ -15,6 +15,10 @@ export class RecipeFacade {
         return this.recipeApi.getAllRecipes();
     }
 
+    getRecipeById(id:number): Observable<RecipeModel>{
+        return this.recipeApi.getRecipeById(id);
+    }
+
     getAllCategory(): Observable<CategoryModel[]>{
         return this.recipeApi.getAllCategories();
     }

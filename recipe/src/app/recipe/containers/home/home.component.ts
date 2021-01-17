@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipeModel } from '../../models/RecipeModel';
 import { RecipeFacade } from '../../recipe.facade';
 import { CategoryModel } from '../../models/CategoryModel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,9 +15,13 @@ export class HomeComponent implements OnInit {
   recipeList: RecipeModel[];
   categoryList: CategoryModel[];
 
-  constructor(private recipeFacade: RecipeFacade) {
-    this.getAllRecipes();
-    this.getAllCategories();
+  constructor(
+    private recipeFacade: RecipeFacade,
+    private router: Router
+  ) 
+  {
+      this.getAllRecipes();
+      this.getAllCategories();
   }
 
   ngOnInit(): void {
@@ -34,6 +39,11 @@ export class HomeComponent implements OnInit {
       response => this.categoryList = response,
       error => console.log(error)
     )
+  }
+
+  handleClickSpotlight(event:any){
+    console.log(`got to router: /recipes/detail/${event}`);
+    this.router.navigate(['/recipes/detail', event])
   }
 
 }

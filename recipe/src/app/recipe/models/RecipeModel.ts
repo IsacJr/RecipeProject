@@ -8,4 +8,5 @@ export class RecipeModel {
     difficultyLabel: string;
     ingredients: string[];
     steps: string[];
+    image: string;
 }
