@@ -19,6 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactComponent } from './containers/contact/contact.component';
 import { SpotlightComponent } from './components/list/spotlight/spotlight.component';
 import { HeadComponent } from './components/detail/head/head.component';
+import { StepByStepComponent } from './components/detail/step-by-step/step-by-step.component';
+import { IngredientsComponent } from './components/detail/ingredients/ingredients.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { HeadComponent } from './components/detail/head/head.component';
     CardSimpleComponent,
     ContactComponent,
     SpotlightComponent,
-    HeadComponent
+    HeadComponent,
+    StepByStepComponent,
+    IngredientsComponent
   ],
   imports: [
     CommonModule,
