@@ -1,0 +1,19 @@
+.custom-counter {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.custom-counter li {
+    counter-increment: step-counter;
+    margin-bottom: 5px;
+}
+.custom-counter li::before {
+    content: counter(step-counter);
+    margin-right: 20px;
+    font-size: 80%;
+    background-color: #ffc107;
+    color: white;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 11px;
+}

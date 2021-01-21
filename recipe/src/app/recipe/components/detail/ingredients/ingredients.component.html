@@ -1,8 +1,14 @@
-<div class="ingredients-background">
+<div class="ingredients-background shadow">
     <div class="ingredients-content">
-        <h1>Ingredients</h1>
-        <ul>
-            <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
-        </ul>
+        <h2 class="font-weight-bold">Ingredients</h2>
+        <div class="ingredient-list d-flex flex-column">
+            <div class="d-flex ingredient-list-item" *ngFor="let ingredient of recipe.ingredients">
+                <span class="badge badge-warning rounded-circle ingredient-list-item-icon">
+                    <fa-icon [icon]="faCheck"></fa-icon>
+                </span>
+                <span>{{ ingredient }}</span>
+            </div>
+            
+        </div>
     </div>
 </div>
