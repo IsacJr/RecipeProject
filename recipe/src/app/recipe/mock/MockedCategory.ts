@@ -12,7 +12,7 @@ export const MockedCategory: CategoryModel[] = [
         id: 3, name: "Drinks", avatar: faGlassMartini
     },
     {
-        id: 4, name: "Fast Food", avatar: faHamburger
+        id: 4, name: "Pasta", avatar: faHamburger
     },
     {
         id: 5, name: "Salad", avatar: faCarrot

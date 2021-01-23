@@ -1,5 +1,6 @@
-h1 {
+.head-text h1 {
     font-size: 70px;
+    margin-bottom: 30px;
 }
 
 .head-container {
@@ -7,11 +8,12 @@ h1 {
 }
 
 .head-text {
-    margin-right: 0px;
+    margin-right: 20px;
     width: 50%;
 }
 
 .head-img {
+    margin-left: 20px;
     width: 50%;
 }
 
@@ -21,7 +23,7 @@ h1 {
 }
 
 .head-status-info-item {
-    margin-right: 12px;
+    margin-right: 18px;
 }
 
 .head-container-item {
@@ -29,5 +31,5 @@ h1 {
 }
 
 .head-status-difficulty {
-    margin-right: 40px;
+    margin-left: 40px;
 }

@@ -1,34 +1,31 @@
 <div class="d-flex head-container justify-content-between">
     <div class="head-text head-container-item">
-        <h1>{{ recipe.name }}</h1>
-        <div class="head-status d-flex justify-content-between">
+        <h1 class="font-weight-bold">{{ recipe.name }}</h1>
+        <div class="head-status d-flex">
             <div class="head-status-info d-flex">
                 <div class="head-status-info-item">
-                    <h6 class="font-weight-light">Total Time</h6>
-                    <h6 class="font-weight-normal">6h 10m</h6>
+                    <h6 class="font-weight-light">Category</h6>
+                    <h6 class="font-weight-normal">{{ recipe.categoryLabel }}</h6>
                 </div>
                 <div class="head-status-info-item">
-                    <h6 class="font-weight-light">Total Time</h6>
-                    <h6 class="font-weight-normal">6h 10m</h6>
-                </div>
-                <div class="head-status-info-item">
-                    <h6 class="font-weight-light">Total Time</h6>
-                    <h6 class="font-weight-normal">6h 10m</h6>
-                </div>
-                <div class="head-status-info-item">
-                    <h6 class="font-weight-light">Total Time</h6>
-                    <h6 class="font-weight-normal">6h 10m</h6>
+                    <h6 class="font-weight-light">People</h6>
+                    <h6 class="font-weight-normal">{{ recipe.numberOfPeopleServes }}x</h6>
                 </div>
             </div>
             <div class="head-status-difficulty">
-                <span>Difficulty</span>
+                <h6 class="font-weight-light">Difficulty</h6>
                 <div class="head-status-difficulty-item">
                     <app-star [starQuantity]="recipe.difficulty"></app-star>
                 </div>
             </div>
         </div>
+        <div class="head-description">
+            <p class="text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras turpis eros, tempus pellentesque ligula id, vulputate feugiat ipsum. Sed commodo aliquam odio, non luctus tortor varius non. Integer gravida maximus felis non venenatis. Sed vitae diam non nisl fermentum semper a quis quam.
+            </p>
+        </div>
     </div>
-    <div class="head-container-item">
+    <div class="head-img head-container-item">
         <img class="head-img-content" src="{{ recipe.image }}">
     </div>
 </div>

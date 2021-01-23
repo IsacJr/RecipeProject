@@ -6,6 +6,8 @@ import {
     NewComponent
 } from './containers'
 import { ContactComponent } from './containers/contact/contact.component';
+import { Component } from '@angular/core';
+import { RecipesComponent } from './containers/recipes/recipes.component';
 
 export const RecipeRoutes: Routes = [
     {
@@ -19,6 +21,10 @@ export const RecipeRoutes: Routes = [
     {
         path: 'recipes/detail/:id',
         component: DetailComponent
+    },
+    {
+        path: 'recipes/list',
+        component: RecipesComponent
     },
     {
         path: 'recipes/new',

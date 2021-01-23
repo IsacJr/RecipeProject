@@ -3,17 +3,22 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
+import { StarComponent } from './components';
 
 
 
 @NgModule({
-  declarations: [TopNavbarComponent],
+  declarations: [
+    TopNavbarComponent,
+    StarComponent
+  ],
   imports: [
     CommonModule,
     RouterModule
   ],
   exports: [
-    TopNavbarComponent
+    TopNavbarComponent,
+    StarComponent
   ]
 })
 export class SharedModule { }
