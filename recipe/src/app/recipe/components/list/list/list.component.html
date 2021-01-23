@@ -1,7 +1,7 @@
 <div>
     <div class="row">
         <div class="card-item col-md-3" *ngFor="let recipe of recipeList">
-            <app-card [recipe]="recipe"></app-card>
+            <app-card [recipe]="recipe" (cardClicked)="handleCardClicked($event)"></app-card>
         </div>
     </div>
 </div>

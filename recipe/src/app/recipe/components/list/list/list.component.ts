@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { RecipeModel } from 'src/app/recipe/models/RecipeModel';
 
 @Component({
@@ -10,10 +10,16 @@ export class ListComponent implements OnInit {
 
   @Input()
   recipeList: RecipeModel[];
+  @Output()
+  routerDetailEvent = new EventEmitter<number>();
   
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleCardClicked(event:any) {
+    this.routerDetailEvent.emit(event);
   }
 
 }

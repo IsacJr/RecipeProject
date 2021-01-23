@@ -1,5 +1,5 @@
 <div class="container">
     <div class="recipe-list">
-        <app-list [recipeList]="recipeList"></app-list>
+        <app-list [recipeList]="recipeList" (routerDetailEvent)="handleClickSpotlight($event)"></app-list>
     </div>
 </div>
