@@ -4,7 +4,7 @@
     </div>
 
     <div id="list-categories">
-        <app-categories [categoryList]="categoryList"></app-categories>
+        <app-categories [categoryList]="categoryList" (categoryCardClicked)="handleCategoryCardClicked($event)"></app-categories>
     </div>
 
     <div id="list-spotlight">

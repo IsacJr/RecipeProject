@@ -1,8 +1,10 @@
 <div id="card-container" class="card shadow d-flex justify-content-center align-items-center">
-    <img class="card-img" src="https://i.pinimg.com/originals/fd/80/ec/fd80ecec48eba2a9adb76e4133905879.png">
-    <div class="card-title">
-        <h3 class="card-text text-center">
-            {{ category.name }}
-        </h3>
+    <div (click)="handleClickCard()">
+        <img class="card-img" src="https://i.pinimg.com/originals/fd/80/ec/fd80ecec48eba2a9adb76e4133905879.png">
+        <div class="card-title">
+            <h3 class="card-text text-center">
+                {{ category.name }}
+            </h3>
+        </div>
     </div>
 </div>

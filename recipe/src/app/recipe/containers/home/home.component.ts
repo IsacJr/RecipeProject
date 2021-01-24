@@ -42,8 +42,12 @@ export class HomeComponent implements OnInit {
   }
 
   handleClickSpotlight(event:any){
-    console.log(`got to router: /recipes/detail/${event}`);
     this.router.navigate(['/recipes/detail', event])
+  }
+
+  handleCategoryCardClicked(event){
+    console.log(`event in home: ${event}`);
+    this.router.navigate(['/recipes/list'], { state: {data: event} });
   }
 
 }

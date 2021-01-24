@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { RecipeModel } from '../../models/RecipeModel';
 import { RecipeFacade } from '../../recipe.facade';
 import { Router } from '@angular/router';
+import { CategoryModel } from '../../models/CategoryModel';
 
 @Component({
   selector: 'app-recipes',
@@ -10,15 +11,20 @@ import { Router } from '@angular/router';
 })
 export class RecipesComponent implements OnInit {
 
+  
   recipeList: RecipeModel[];
+  categoryList: CategoryModel[];
+  selectedCategoryId?: number;
 
   constructor(
     private recipeFacade: RecipeFacade,
     private router: Router) { 
     this.getAllRecipes();
+    this.getAllCategories();
   }
 
   ngOnInit(): void {
+    this.setSelectedCategory();
   }
 
   getAllRecipes(){
@@ -26,6 +32,19 @@ export class RecipesComponent implements OnInit {
       response => this.recipeList = response,
       error => console.log(error)
     )
+  }
+
+  getAllCategories(){
+    this.recipeFacade.getAllCategory().subscribe(
+      response => this.categoryList = response,
+      error => console.log(error)
+    )
+  }
+
+  setSelectedCategory(){
+    if(history.state.data){
+      
+    }
   }
 
   handleClickSpotlight(event:any){

@@ -16,7 +16,6 @@ export class TopNavbarComponent implements OnInit {
 
   toggleNavbarCollapsing(){
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
-    console.log(this.isNavbarCollapsed);
   }
 
 }

@@ -1,4 +1,10 @@
 <div class="container">
+    <div>
+        <select class="custom-select col-md-6">
+            <option selected>Open this select menu</option>
+            <option #category.id *ngFor="let category of categoryList" value="category.id">{{ category.name }}</option>
+        </select>
+    </div>
     <div class="recipe-list">
         <app-list [recipeList]="recipeList" (routerDetailEvent)="handleClickSpotlight($event)"></app-list>
     </div>

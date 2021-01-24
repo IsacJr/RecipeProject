@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { CategoryModel } from 'src/app/recipe/models/CategoryModel';
 
 @Component({
@@ -9,10 +9,15 @@ import { CategoryModel } from 'src/app/recipe/models/CategoryModel';
 export class CardSimpleComponent implements OnInit {
 
   @Input() category: CategoryModel;
+  @Output() cardClicked = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleClickCard() {
+    this.cardClicked.emit(this.category.id);
   }
 
 }

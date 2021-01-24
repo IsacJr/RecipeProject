@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CategoryModel } from 'src/app/recipe/models/CategoryModel';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,6 +11,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 export class CategoriesComponent implements OnInit {
 
   @Input() categoryList: CategoryModel[];
+  @Output() categoryCardClicked = new EventEmitter<number>();
 
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;
@@ -18,6 +19,10 @@ export class CategoriesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleCardClicked(event){
+    this.categoryCardClicked.emit(event);
   }
 
 }
