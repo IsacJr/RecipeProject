@@ -4,7 +4,7 @@
 # App Recipe
 
 This project is about a Recipe List.
-[Demo](https://recipe-project-pi.vercel.app/recipes/list)
+[Demo](https://recipe-project-pi.vercel.app)
 
 ## Getting Started
 
