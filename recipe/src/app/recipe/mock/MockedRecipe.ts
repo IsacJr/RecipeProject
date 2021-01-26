@@ -14,7 +14,7 @@ export const MockedRecipe: RecipeModel[] = [
     {
         id: 3, name: "Strogonoff", category: 4, categoryLabel: "Pasta", numberOfPeopleServes: 3, difficulty: 2, difficultyLabel: "2",
         ingredients: ["ingredient 1", "ingredient 2", "ingredient 3"], steps: ["step 1", "step 2", "step 3"],
-        image:"https://www.irismassas.com.br/wp-content/uploads/2015/06/Carnes-Estrogonoff-de-Carne.jpg"
+        image:"https://minhasdelicias.com/wp-content/uploads/2018/02/pollo-strogonoff.jpg"
     },
     {
         id: 4, name: "Caesar Salad", category: 5, categoryLabel: "Salad", numberOfPeopleServes: 3, difficulty: 1, difficultyLabel: "1",
@@ -29,7 +29,7 @@ export const MockedRecipe: RecipeModel[] = [
     {
         id: 6, name: "Orange Juice", category: 3, categoryLabel: "Drinks", numberOfPeopleServes: 2, difficulty: 1, difficultyLabel: "1",
         ingredients: ["ingredient 1", "ingredient 2", "ingredient 3"], steps: ["step 1", "step 2", "step 3"],
-        image:"https://static.toiimg.com/thumb/msid-68562297,width-800,height-600,resizemode-75,imgsize-950123,pt-32,y_pad-40/68562297.jpg"
+        image:"https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/orange-juice-1296x728-feature.jpg?w=1155&h=1528"
     },
     {
         id: 7, name: "Ice Cream Sandwich", category: 2, categoryLabel: "Deserts", numberOfPeopleServes: 3, difficulty: 4, difficultyLabel: "4",

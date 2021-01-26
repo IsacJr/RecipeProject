@@ -1,6 +1,6 @@
 <div class="container">
-    <div>
-        <select class="custom-select col-md-6">
+    <div class="recipes-select">
+        <select class="custom-select col-md-6" *ngIf="false">
             <option selected>Open this select menu</option>
             <option #category.id *ngFor="let category of categoryList" value="category.id">{{ category.name }}</option>
         </select>
