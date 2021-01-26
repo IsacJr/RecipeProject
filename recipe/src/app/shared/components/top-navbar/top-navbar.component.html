@@ -7,13 +7,13 @@
     <a id="logo-top-navbar" class="navbar-brand font-weight-bold font-italic" href="#">App Recipes</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03" [class.collapse]="isNavbarCollapsed">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/']">Home</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['recipes/home']">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['recipes/list']">Recipes</a>
         </li>
-        <!-- <li class="nav-item">
+        <!-- <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['recipes/contact']">Contact</a>
         </li> -->
       </ul>

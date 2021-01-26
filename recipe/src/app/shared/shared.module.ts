@@ -2,15 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
-import { StarComponent } from './components';
-
+import { TopNavbarComponent, StarComponent, FooterComponent } from './components';
 
 
 @NgModule({
   declarations: [
     TopNavbarComponent,
-    StarComponent
+    StarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +17,8 @@ import { StarComponent } from './components';
   ],
   exports: [
     TopNavbarComponent,
-    StarComponent
+    StarComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
