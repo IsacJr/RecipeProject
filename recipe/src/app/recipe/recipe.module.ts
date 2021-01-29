@@ -10,8 +10,6 @@ import {
   DetailComponent,
   NewComponent,
   RecipesComponent} from './containers';  
-import { CardComponent } from './components/home/card/card.component';
-import { CardSimpleComponent } from './components/home/card-simple/card-simple.component';
 import {
   SectionComponent,
   BadgeComponent,
@@ -31,12 +29,10 @@ import { ListComponent } from './components/list/list/list.component';
     HomeComponent,
     DetailComponent,
     NewComponent,
-    CardComponent,
     SectionComponent,
     WelcomeComponent,
     CategoriesComponent,
     BadgeComponent,
-    CardSimpleComponent,
     ContactComponent,
     SpotlightComponent,
     HeadComponent,
