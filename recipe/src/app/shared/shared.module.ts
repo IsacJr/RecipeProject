@@ -6,6 +6,7 @@ import { TopNavbarComponent, StarComponent, FooterComponent } from './components
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CardComponent } from './components/card/card.component';
 import { CardSimpleComponent } from './components/card-simple/card-simple.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,8 @@ import { CardSimpleComponent } from './components/card-simple/card-simple.compon
   imports: [
     CommonModule,
     FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule
   ],
   exports: [

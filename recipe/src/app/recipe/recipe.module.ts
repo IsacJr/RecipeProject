@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -43,7 +42,6 @@ import { ListComponent } from './components/list/list/list.component';
   ],
   imports: [
     CommonModule,
-    FormsModule,
     HttpClientModule,
     FontAwesomeModule,
     SharedModule

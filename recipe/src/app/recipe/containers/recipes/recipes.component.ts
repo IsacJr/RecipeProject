@@ -3,6 +3,7 @@ import { RecipeModel } from '../../models/RecipeModel';
 import { RecipeFacade } from '../../recipe.facade';
 import { Router } from '@angular/router';
 import { CategoryModel } from '../../models/CategoryModel';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-recipes',
@@ -18,10 +19,15 @@ export class RecipesComponent implements OnInit {
 
   constructor(
     private recipeFacade: RecipeFacade,
-    private router: Router) { 
+    private router: Router,
+    private formBuilder: FormBuilder) { 
     this.getAllRecipes();
     this.getAllCategories();
   }
+
+  myForm = this.formBuilder.group({
+    categoryForm: [null, [Validators.required]]
+  })
 
   ngOnInit(): void {
     this.setSelectedCategory();
@@ -50,6 +56,15 @@ export class RecipesComponent implements OnInit {
   handleClickSpotlight(event:any){
     console.log(`got to router: /recipes/detail/${event}`);
     this.router.navigate(['/recipes/detail', event])
+  }
+
+  get categoryForm(){
+    return this.myForm.get('categoryForm');
+  }
+
+  handleSelect(event: any){
+    //this.categoryForm.setValue(event.target.value, { onlySelf: true })
+    console.log(event);
   }
 
 }

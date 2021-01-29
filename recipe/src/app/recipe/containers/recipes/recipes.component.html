@@ -1,8 +1,10 @@
 <div class="container">
     <div class="recipes-select">
-        <select class="custom-select col-md-6" *ngIf="false">
-            <option selected>Open this select menu</option>
-            <option #category.id *ngFor="let category of categoryList" value="category.id">{{ category.name }}</option>
+        <select #form formControlName="categoryForm" class="custom-select col-md-6" *ngIf="false" (change)="handleSelect(form.value)">
+            <option [value]="null" disabled>Open this select menu</option>
+            <option *ngFor="let category of categoryList" [value]="category.id">
+                {{ category.name }}
+            </option>
         </select>
     </div>
     <div class="recipe-list">
