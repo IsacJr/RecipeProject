@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { TopNavbarComponent, StarComponent, FooterComponent } from './components';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { TopNavbarComponent, StarComponent, FooterComponent } from './components
   ],
   imports: [
     CommonModule,
+    FontAwesomeModule,
     RouterModule
   ],
   exports: [

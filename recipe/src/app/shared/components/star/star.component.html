@@ -1,5 +1,7 @@
 <div class="d-flex">
-    <h2 class="text-warning" *ngFor="let star of [].constructor(starQuantity)">
+    <!-- <h2 class="text-warning" *ngFor="let star of [].constructor(starQuantity)">
         ٭
-    </h2>
+    </h2> -->
+    <fa-icon [icon]="faStar" class="text-warning" *ngFor="let star of [].constructor(starQuantity)">
+    </fa-icon>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-star',
@@ -8,6 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class StarComponent implements OnInit {
 
   @Input() starQuantity: number;
+
+  faStar = faStar;
   
   constructor() { }
 
