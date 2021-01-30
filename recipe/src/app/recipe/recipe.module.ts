@@ -23,6 +23,8 @@ import { IngredientsComponent } from './components/detail/ingredients/ingredient
 import { SharedModule } from '../shared';
 import { ListComponent } from './components/list/list/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactFormComponent } from './components/contact/contact-form/contact-form.component';
+import { ContactSectionComponent } from './components/contact/contact-section/contact-section.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     IngredientsComponent,
     ListComponent,
     RecipesComponent,
+    ContactFormComponent,
+    ContactSectionComponent,
   ],
   imports: [
     CommonModule,
