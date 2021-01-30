@@ -22,6 +22,7 @@ import { StepByStepComponent } from './components/detail/step-by-step/step-by-st
 import { IngredientsComponent } from './components/detail/ingredients/ingredients.component';
 import { SharedModule } from '../shared';
 import { ListComponent } from './components/list/list/list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,8 @@ import { ListComponent } from './components/list/list/list.component';
     CommonModule,
     HttpClientModule,
     FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
     SharedModule
   ],
   providers: [

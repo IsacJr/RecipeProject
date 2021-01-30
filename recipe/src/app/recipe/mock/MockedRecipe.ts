@@ -42,7 +42,7 @@ export const MockedRecipe: RecipeModel[] = [
         image:"https://www.thedailymeal.com/sites/default/files/2015/09/08/mainshutterstock_grilledste.jpg"
     },
     {
-        id: 9, name: "Lasagna Bolognese", category: 4, categoryLabel: "Deserts", numberOfPeopleServes: 5, difficulty: 2, difficultyLabel: "2",
+        id: 9, name: "Lasagna Bolognese", category: 4, categoryLabel: "Pasta", numberOfPeopleServes: 5, difficulty: 2, difficultyLabel: "2",
         ingredients: ["ingredient 1", "ingredient 2", "ingredient 3"], steps: ["step 1", "step 2", "step 3"],
         image:"https://www.365daysofbakingandmore.com/wp-content/uploads/2011/02/Lasagna-FEATURE.jpg"
     }

@@ -3,7 +3,7 @@ import { RecipeModel } from '../../models/RecipeModel';
 import { RecipeFacade } from '../../recipe.facade';
 import { Router } from '@angular/router';
 import { CategoryModel } from '../../models/CategoryModel';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-recipes',
@@ -11,26 +11,25 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./recipes.component.scss']
 })
 export class RecipesComponent implements OnInit {
-
   
   recipeList: RecipeModel[];
   categoryList: CategoryModel[];
   selectedCategoryId?: number;
+  myForm: FormGroup;
 
   constructor(
     private recipeFacade: RecipeFacade,
     private router: Router,
     private formBuilder: FormBuilder) { 
-    this.getAllRecipes();
-    this.getAllCategories();
+      this.myForm = this.formBuilder.group({
+        categoryForm: [null, [Validators.required]]
+      });
+      this.getAllCategories();
+      this.setSelectedCategory();      
   }
 
-  myForm = this.formBuilder.group({
-    categoryForm: [null, [Validators.required]]
-  })
-
   ngOnInit(): void {
-    this.setSelectedCategory();
+
   }
 
   getAllRecipes(){
@@ -49,7 +48,11 @@ export class RecipesComponent implements OnInit {
 
   setSelectedCategory(){
     if(history.state.data){
-      
+      const categorySelected = this.categoryList.find(c => c.id === history.state.data);
+      this.myForm.controls['categoryForm'].setValue(categorySelected, { onlySelf: true });
+      this.getRecipesByCategory(history.state.data);
+    }else{
+      this.getAllRecipes();
     }
   }
 
@@ -62,9 +65,33 @@ export class RecipesComponent implements OnInit {
     return this.myForm.get('categoryForm');
   }
 
-  handleSelect(event: any){
-    //this.categoryForm.setValue(event.target.value, { onlySelf: true })
-    console.log(event);
+  handleSubmit(e){
+    e.preventDefault();
+    console.log(this.myForm.value.categoryForm);
+    if(this.myForm.value.categoryForm)
+      this.getRecipesByCategory(this.myForm.value.categoryForm);
+    else
+      this.getAllRecipes();
+  }
+
+  handleClean(){
+    this.myForm.controls['categoryForm'].setValue(null, { onlySelf: true });
+    this.getAllRecipes();
+  }
+
+  getRecipesByCategory(categoryId: number){
+    let list: RecipeModel[];
+    this.recipeFacade.getAllRecipe().subscribe(
+      response => list = response,
+      error => console.log(error)
+    )
+    this.recipeList = list.filter(r => r.category === categoryId);
+  }
+
+  handleSelectChange(e){
+    console.log(e.target.value);
+    // this.myForm.controls['categoryForm'].setValue(e.target.value), { onlySelf: true });
+    // this.getRecipesByCategory(this.myForm.value.categoryForm);
   }
 
 }
