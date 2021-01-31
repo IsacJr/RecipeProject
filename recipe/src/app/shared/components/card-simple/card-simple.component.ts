@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { CategoryModel } from 'src/app/recipe/models/CategoryModel';
+import { faIceCream } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-card-simple',
@@ -10,6 +11,8 @@ export class CardSimpleComponent implements OnInit {
 
   @Input() category: CategoryModel;
   @Output() cardClicked = new EventEmitter<number>();
+
+  faIceCream = faIceCream;
 
   constructor() { }
 

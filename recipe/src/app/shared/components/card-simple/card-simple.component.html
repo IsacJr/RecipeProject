@@ -1,7 +1,9 @@
 <div id="card-container" class="card shadow d-flex justify-content-center align-items-center">
-    <div (click)="handleClickCard()">
-        <img class="card-img" src="https://i.pinimg.com/originals/fd/80/ec/fd80ecec48eba2a9adb76e4133905879.png">
-        <div class="card-title">
+    <div class="d-flex flex-column align-items-center w-100" (click)="handleClickCard()">
+        <div class="py-2">
+            <fa-icon [icon]="category.avatar" size="4x" [inverse]="true" [styles]="{'stroke': 'red', 'color': '#ffc107'}"></fa-icon>
+        </div>
+        <div class="card-title py-2">
             <h3 class="card-text text-center">
                 {{ category.name }}
             </h3>
