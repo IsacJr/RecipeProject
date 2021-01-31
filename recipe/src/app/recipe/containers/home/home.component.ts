@@ -46,7 +46,6 @@ export class HomeComponent implements OnInit {
   }
 
   handleCategoryCardClicked(event){
-    console.log(`event in home: ${event}`);
     this.router.navigate(['/recipes/list'], { state: {data: event} });
   }
 

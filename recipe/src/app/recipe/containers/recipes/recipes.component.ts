@@ -57,7 +57,6 @@ export class RecipesComponent implements OnInit {
   }
 
   handleClickSpotlight(event:any){
-    console.log(`got to router: /recipes/detail/${event}`);
     this.router.navigate(['/recipes/detail', event])
   }
 
@@ -69,7 +68,7 @@ export class RecipesComponent implements OnInit {
     e.preventDefault();
     console.log(this.myForm.value.categoryForm);
     if(this.myForm.value.categoryForm)
-      this.getRecipesByCategory(this.myForm.value.categoryForm);
+      this.getRecipesByCategory(this.myForm.value.categoryForm.id);
     else
       this.getAllRecipes();
   }
