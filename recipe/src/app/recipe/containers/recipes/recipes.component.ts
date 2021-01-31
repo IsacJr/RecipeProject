@@ -67,6 +67,7 @@ export class RecipesComponent implements OnInit {
   handleSubmit(e){
     e.preventDefault();
     console.log(this.myForm.value.categoryForm);
+    console.log(this.categoryForm);
     if(this.myForm.value.categoryForm)
       this.getRecipesByCategory(this.myForm.value.categoryForm.id);
     else
