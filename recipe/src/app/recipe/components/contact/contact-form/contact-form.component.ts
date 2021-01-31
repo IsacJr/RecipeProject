@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ContactModel } from 'src/app/recipe/models/ContactModel';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,11 +14,11 @@ export class ContactFormComponent implements OnInit {
   constructor(private fb: FormBuilder) { 
 
     this.contactForm = this.fb.group({
-      firstName: [''],
-      lastName: [''],
-      email: [''],
-      phoneNumber: [''],
-      comments: ['']
+      firstName: ['', [Validators.required, Validators.maxLength(60)]],
+      lastName: ['', [Validators.required, Validators.maxLength(60)]],
+      email: ['', [Validators.required, Validators.maxLength(60)]],
+      phoneNumber: ['', [Validators.required, Validators.maxLength(60)]],
+      comments: ['', Validators.maxLength(500)]
     });
 
   }
@@ -26,7 +27,12 @@ export class ContactFormComponent implements OnInit {
   }
 
   handleSubmit(e){
-    
+    e.preventDefault();
+    if(this.contactForm.valid){
+      const contact = this.contactForm.value as ContactModel;
+      console.log(contact);
+      this.contactForm.reset("");
+    }
   }
 
 }

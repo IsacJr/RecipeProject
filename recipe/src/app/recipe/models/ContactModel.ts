@@ -3,5 +3,5 @@ export class ContactModel {
     lastName: string;
     email: string;
     phoneNumber: string;
-    Comments?: string;
+    comments?: string;
 }

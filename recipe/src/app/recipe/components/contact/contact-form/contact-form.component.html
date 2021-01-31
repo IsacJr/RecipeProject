@@ -2,28 +2,29 @@
     <form [formGroup]="contactForm" (ngSubmit)="handleSubmit($event)">
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label>First name</label>
+                <label class="font-weight-normal">First name</label>
                 <input type="text" class="form-control" placeholder="Your first name" formControlName="firstName">
             </div>
             <div class="form-group col-md-6">
-                <label>Last name</label>
+                <label class="font-weight-normal">Last name</label>
                 <input type="text" class="form-control" placeholder="Your last name" formControlName="lastName">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label>Email</label>
-                <input type="text" class="form-control" placeholder="Your email" formControlName="email">
+                <label class="font-weight-normal">Email</label>
+                <input type="email" class="form-control" placeholder="Your email" formControlName="email">
             </div>
             <div class="form-group col-md-6">
-                <label>Phone number</label>
+                <label class="font-weight-normal">Phone number</label>
                 <input type="text" class="form-control" placeholder="Your phone number" formControlName="phoneNumber">
             </div>
         </div>
         <div class="form-group">
-            <label>Questions or comments</label>
+            <label class="font-weight-normal">Questions or comments</label>
+            <label class="text-secondary font-weight-normal ml-1">(Optional)</label>
             <textarea class="form-control" row="3" formControlName="comments"></textarea>
         </div>
-        <button type="submit" class="btn btn-warning col-md-12">Submit request</button>
+        <button type="submit" class="btn btn-warning col-md-12 py-2">Submit request</button>
     </form>
 </div>
