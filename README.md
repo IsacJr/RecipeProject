@@ -3,7 +3,7 @@
 
 # App Recipe
 
-This project is about a Recipe List.
+This project is about a basic Recipe List web app layout.
 [Demo](https://recipe-project-pi.vercel.app)
 
 ## Getting Started
