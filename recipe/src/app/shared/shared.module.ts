@@ -29,7 +29,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     StarComponent,
     CardComponent,
     CardSimpleComponent,
-    FooterComponent
+    FooterComponent,
+    RouterModule
   ]
 })
 export class SharedModule { }
