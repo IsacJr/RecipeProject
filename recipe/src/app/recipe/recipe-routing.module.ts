@@ -11,8 +11,13 @@ import { RecipesComponent } from './containers/recipes/recipes.component';
 
 export const RecipeRoutes: Routes = [
     {
+        path: '',
+        redirectTo: 'recipes/home',
+        pathMatch: 'full'
+    },
+    {
         path: 'recipes',
-        redirectTo: 'recipes/home'
+        redirectTo: 'recipes/home',
     },
     {
         path: 'recipes/home',
