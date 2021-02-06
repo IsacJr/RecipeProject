@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RecipeModel } from '../../models/RecipeModel';
 import { RecipeFacade } from '../../recipe.facade';
 import { Router } from '@angular/router';
@@ -25,73 +25,66 @@ export class RecipesComponent implements OnInit {
         categoryForm: [null, [Validators.required]]
       });
       this.getAllCategories();
-      this.setSelectedCategory();      
+      this.tryInitializeRecipes();
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  }
 
+  public get categoryForm(){
+    return this.myForm.get('categoryForm');
   }
 
-  getAllRecipes(){
+  private tryInitializeRecipes(){
+    if(history.state.data){
+      const categorySelected = this.categoryList.find(c => c.id === history.state.data);
+      this.myForm.controls['categoryForm'].setValue(categorySelected, { onlySelf: true });
+      this.getAllRecipesByCategory(history.state.data);
+    }else{
+      this.getAllRecipes();
+    }
+  }
+
+  private getAllRecipes(){
     this.recipeFacade.getAllRecipe().subscribe(
       response => this.recipeList = response,
       error => console.log(error)
     )
   }
 
-  getAllCategories(){
+  private getAllRecipesByCategory(id: number){
+    this.recipeFacade.getRecipeByCategory(id).subscribe(
+      response => this.recipeList = response,
+      error => console.log(error)
+    )
+  }
+
+  private getAllCategories(){
     this.recipeFacade.getAllCategory().subscribe(
       response => this.categoryList = response,
       error => console.log(error)
     )
   }
 
-  setSelectedCategory(){
-    if(history.state.data){
-      const categorySelected = this.categoryList.find(c => c.id === history.state.data);
-      this.myForm.controls['categoryForm'].setValue(categorySelected, { onlySelf: true });
-      this.getRecipesByCategory(history.state.data);
-    }else{
-      this.getAllRecipes();
-    }
-  }
-
   handleClickSpotlight(event:any){
     this.router.navigate(['/recipes/detail', event])
   }
 
-  get categoryForm(){
-    return this.myForm.get('categoryForm');
-  }
-
   handleSubmit(e){
     e.preventDefault();
-    console.log(this.myForm.value.categoryForm);
-    console.log(this.categoryForm);
     if(this.myForm.value.categoryForm)
-      this.getRecipesByCategory(this.myForm.value.categoryForm.id);
+      this.getAllRecipesByCategory(this.myForm.value.categoryForm.id);
     else
       this.getAllRecipes();
   }
 
   handleClean(){
-    this.myForm.controls['categoryForm'].setValue(null, { onlySelf: true });
+    this.myForm.controls['categoryForm'].reset();
     this.getAllRecipes();
-  }
-
-  getRecipesByCategory(categoryId: number){
-    let list: RecipeModel[];
-    this.recipeFacade.getAllRecipe().subscribe(
-      response => list = response,
-      error => console.log(error)
-    )
-    this.recipeList = list.filter(r => r.category === categoryId);
   }
 
   handleSelectChange(e){
     console.log(e.target.value);
     // this.myForm.controls['categoryForm'].setValue(e.target.value), { onlySelf: true });
-    // this.getRecipesByCategory(this.myForm.value.categoryForm);
   }
 
 }
