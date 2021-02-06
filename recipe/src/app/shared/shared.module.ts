@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CardComponent } from './components/card/card.component';
 import { CardSimpleComponent } from './components/card-simple/card-simple.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ModalConfirmComponent } from './components/modal-confirm/modal-confirm.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     StarComponent,
     CardComponent,
     CardSimpleComponent,
-    FooterComponent
+    FooterComponent,
+    ModalConfirmComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     CardComponent,
     CardSimpleComponent,
     FooterComponent,
+    ModalConfirmComponent,
     RouterModule
+  ],
+  entryComponents: [
+    ModalConfirmComponent
   ]
 })
 export class SharedModule { }
