@@ -7,17 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ModalConfirmComponent implements OnInit {
 
-  @Input() isHidden = true;
   @Input() title: string;
   @Input() message: string;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  handleConfirm(){
-    this.isHidden = false;
-  }
+  ngOnInit(): void { }
 
 }
