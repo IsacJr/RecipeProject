@@ -24,7 +24,7 @@ export class RecipeFacade {
         return this.recipeApi.getAllRecipes().pipe(
             map( recipes =>  recipes.filter(rec => rec.category === id),
             tap(console.log))
-        )
+        );
     }
 
     getAllCategory(): Observable<CategoryModel[]>{

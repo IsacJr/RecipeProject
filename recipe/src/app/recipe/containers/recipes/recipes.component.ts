@@ -14,7 +14,7 @@ import { unsubscribeObservables } from 'src/app/shared/utils/observable-utils';
   styleUrls: ['./recipes.component.scss']
 })
 export class RecipesComponent implements OnInit, OnDestroy {
-  
+
   recipeList: RecipeModel[];
   categoryList: CategoryModel[];
   selectedCategoryId?: number;
@@ -24,7 +24,7 @@ export class RecipesComponent implements OnInit, OnDestroy {
   constructor(
     private recipeFacade: RecipeFacade,
     private router: Router,
-    private formBuilder: FormBuilder) { 
+    private formBuilder: FormBuilder) {
       this.myForm = this.formBuilder.group({
         categoryForm: [null, [Validators.required]]
       });
@@ -34,7 +34,7 @@ export class RecipesComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {  }
 
-  public get categoryForm(){
+  public get categoryForm() {
     return this.myForm.get('categoryForm');
   }
 
@@ -56,7 +56,7 @@ export class RecipesComponent implements OnInit, OnDestroy {
         response => this.recipeList = response,
         error => console.log(error)
       )
-    )
+    );
   }
 
   private getAllRecipesByCategory(id: number){
@@ -81,11 +81,11 @@ export class RecipesComponent implements OnInit, OnDestroy {
     );
   }
 
-  handleClickSpotlight(event:any){
+  handleClickSpotlight(event: any){
     this.router.navigate(['/recipes/detail', event])
   }
 
-  handleSubmit(e){
+  handleSubmit(e: any){
     e.preventDefault();
     if(this.myForm.value.categoryForm)
       this.getAllRecipesByCategory(this.myForm.value.categoryForm.id);

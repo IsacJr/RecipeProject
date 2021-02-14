@@ -15,13 +15,13 @@ export class CategoriesComponent implements OnInit {
 
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  handleCardClicked(event){
+  handleCardClicked(event):void {
     this.categoryCardClicked.emit(event);
   }
 

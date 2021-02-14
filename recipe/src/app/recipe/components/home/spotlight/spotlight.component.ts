@@ -20,7 +20,7 @@ export class SpotlightComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleCardClicked(event:any) {
+  handleCardClicked(event:any): void {
     this.routerDetailEvent.emit(event);
   }
 

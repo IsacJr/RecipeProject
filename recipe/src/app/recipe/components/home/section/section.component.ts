@@ -9,7 +9,7 @@ import { RecipeModel } from 'src/app/recipe/models/RecipeModel';
 })
 export class SectionComponent implements OnInit {
 
-  @Input() recipeList:RecipeModel[];
+  @Input() recipeList: RecipeModel[];
 
   constructor() { }
 

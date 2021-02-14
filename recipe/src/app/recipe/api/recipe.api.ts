@@ -24,7 +24,7 @@ export class RecipeAPI {
         return new Observable(observable => {
             observable.next(recipe);
             observable.complete();
-        })
+        });
     }
 
     getAllCategories(): Observable<CategoryModel[]>{

@@ -39,4 +39,4 @@ export const RecipeRoutes: Routes = [
         path: 'recipes/contact',
         component: ContactComponent
     }
-]
+];

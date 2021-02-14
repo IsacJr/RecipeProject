@@ -13,7 +13,7 @@ import { unsubscribeObservables } from 'src/app/shared/utils/observable-utils';
 })
 export class DetailComponent implements OnInit, OnDestroy {
 
-  recipe:RecipeModel;
+  recipe: RecipeModel;
   id: number;
   private subRouteId: any;
   private subscriptionList: Subscription[] = [];
@@ -31,11 +31,11 @@ export class DetailComponent implements OnInit, OnDestroy {
     );
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     unsubscribeObservables(this.subscriptionList);
   }
 
-  private getRecipeById(id: number){
+  private getRecipeById(id: number): void {
     this.subscriptionList.push(
       this.facade.getRecipeById(this.id)
       .pipe(take(1))

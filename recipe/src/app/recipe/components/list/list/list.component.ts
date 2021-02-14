@@ -12,13 +12,13 @@ export class ListComponent implements OnInit {
   recipeList: RecipeModel[];
   @Output()
   routerDetailEvent = new EventEmitter<number>();
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  handleCardClicked(event:any) {
+  handleCardClicked(event:any): void {
     this.routerDetailEvent.emit(event);
   }
 

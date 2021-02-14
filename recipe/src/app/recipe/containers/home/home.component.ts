@@ -5,7 +5,7 @@ import { RecipeFacade } from '../../recipe.facade';
 import { CategoryModel } from '../../models/CategoryModel';
 import { Router } from '@angular/router';
 import { take } from 'rxjs/internal/operators';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { unsubscribeObservables } from 'src/app/shared/utils/observable-utils';
 
 @Component({
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     private recipeFacade: RecipeFacade,
     private router: Router
-  ) 
+  )
   {
       this.getAllRecipes();
       this.getAllCategories();
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
   }
 
-  getAllRecipes(){
+  getAllRecipes(): void {
     this.subscriptionList.push(
       this.recipeFacade.getAllRecipe()
       .pipe(take(1))
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     );
   }
 
-  getAllCategories(){
+  getAllCategories(): void {
     this.subscriptionList.push(
       this.recipeFacade.getAllCategory()
       .pipe(take(1))
@@ -53,15 +53,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     );
   }
 
-  handleClickSpotlight(event:any){
-    this.router.navigate(['/recipes/detail', event])
+  handleClickSpotlight(event:any): void {
+    this.router.navigate(['/recipes/detail', event]);
   }
 
-  handleCategoryCardClicked(event){
+  handleCategoryCardClicked(event): void {
     this.router.navigate(['/recipes/list'], { state: {data: event} });
   }
 
-  ngOnDestroy(){
+  ngOnDestroy(): void {
     unsubscribeObservables(this.subscriptionList);
   }
 

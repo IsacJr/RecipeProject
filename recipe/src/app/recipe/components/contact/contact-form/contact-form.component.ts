@@ -8,10 +8,10 @@ import { ContactModel } from 'src/app/recipe/models/ContactModel';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
-  
+
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) {
 
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.maxLength(60)]],
@@ -26,12 +26,12 @@ export class ContactFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleSubmit(e){
+  handleSubmit(e: any){
     e.preventDefault();
-    if(this.contactForm.valid){
+    if(this.contactForm.valid) {
       const contact = this.contactForm.value as ContactModel;
       console.log(contact);
-      this.contactForm.reset("");
+      this.contactForm.reset('');
     }
   }
 
