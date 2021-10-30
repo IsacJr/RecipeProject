@@ -10,8 +10,8 @@
             </a>
         </div>
     </div>
-    <div class="d-flex justify-content-between">
-        <div class="card-margin" *ngFor="let category of categoryList">
+    <div class="category-wrapper">
+        <div *ngFor="let category of categoryList">
             <app-card-simple [category]="category" (cardClicked)="handleCardClicked($event)"></app-card-simple>
         </div>
     </div>

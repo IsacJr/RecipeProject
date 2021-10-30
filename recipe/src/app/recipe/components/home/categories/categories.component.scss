@@ -1,6 +1,4 @@
-.card-margin{
-    margin-bottom: 2.4rem;
-}
+
 
 #categories-title-navigation {
     margin-bottom: 12px;
@@ -12,4 +10,10 @@
 
 #categories-arrow-right {
     margin-left: 8px;
+}
+
+.category-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 30px;
 }
