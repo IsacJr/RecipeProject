@@ -2,3 +2,14 @@
     min-height: 85.6vh;
     margin-top: 35px;
 }
+
+.recipe-container {
+    width: 90%;
+    max-width: 1140px;
+
+    margin: 20px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

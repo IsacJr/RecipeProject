@@ -2,7 +2,7 @@
     <div id="spotlight-title">
         <h2>Spotlight Recipes</h2>
     </div>
-    <div id="spotlight-cards" class="d-flex justify-content-between">
+    <div class="spotlight-cards">
         <div class="card-margin" *ngFor="let recipe of recipeSpotlightList">
             <app-card [recipe]="recipe" (cardClicked)="handleCardClicked($event)"></app-card>
         </div>
