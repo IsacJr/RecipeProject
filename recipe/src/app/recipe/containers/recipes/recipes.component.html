@@ -1,17 +1,15 @@
-<div class="container">
-    <form [formGroup]="myForm" (ngSubmit)="handleSubmit($event)" class="recipes-select d-flex">
-        <select #form formControlName="categoryForm" class="custom-select col-md-6" *ngIf="true" (change)="handleSelectChange($event)">
-            <option [ngValue]="null" selected disabled>Open this select menu</option>
-            <option *ngFor="let category of categoryList" [ngValue]="category"> 
-                {{ category.name }}
-            </option>
-        </select>
-        <div class="button-group d-flex">
-            <button class="btn btn-warning button-item" type="submit" [disabled]="!categoryForm.value">Search</button>
-            <button class="btn btn-light button-item" type="button" (click)="handleClean()" [disabled]="!categoryForm.value">Clean</button>
-        </div>
-    </form>
-    <div class="recipe-list">
-        <app-list [recipeList]="recipeList" (routerDetailEvent)="handleClickSpotlight($event)"></app-list>
+<form [formGroup]="myForm" (ngSubmit)="handleSubmit($event)" class="recipes-select d-flex">
+    <select #form formControlName="categoryForm" class="custom-select col-md-6" *ngIf="true" (change)="handleSelectChange($event)">
+        <option [ngValue]="null" selected disabled>Open this select menu</option>
+        <option *ngFor="let category of categoryList" [ngValue]="category"> 
+            {{ category.name }}
+        </option>
+    </select>
+    <div class="button-group d-flex">
+        <button class="btn btn-warning button-item" type="submit" [disabled]="!categoryForm.value">Search</button>
+        <button class="btn btn-light button-item" type="button" (click)="handleClean()" [disabled]="!categoryForm.value">Clean</button>
     </div>
+</form>
+<div class="recipe-list">
+    <app-list [recipeList]="recipeList" (routerDetailEvent)="handleClickSpotlight($event)"></app-list>
 </div>
