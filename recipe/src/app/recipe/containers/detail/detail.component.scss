@@ -1,4 +1,7 @@
 .detail-section-mid {
+    display: flex;
+    justify-content: space-between;
+
     margin-top: 30px;
 }
 
@@ -16,4 +19,14 @@
 
 .detail-container-ingredient {
     margin-left: 60px;
+}
+
+@media (max-width: 768px) {
+    .detail-section-mid {
+        flex-direction: column-reverse;
+    }
+
+    .detail-container-ingredients {
+        margin-bottom: 30px;
+    }
 }
