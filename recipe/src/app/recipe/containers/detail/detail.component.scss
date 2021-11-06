@@ -1,32 +1,18 @@
 .detail-section-mid {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 
     margin-top: 30px;
 }
 
-.item-width {
-    width: 100%;
-}
-
-.detail-section-mid-item {
-    flex: 50%;
-}
-
-.detail-container-step-by-step {
-    margin-right: 20px;
-}
-
-.detail-container-ingredient {
-    margin-left: 60px;
-}
-
 @media (max-width: 768px) {
     .detail-section-mid {
-        flex-direction: column-reverse;
+        grid-template-columns: 1fr;
     }
 
     .detail-container-ingredients {
-        margin-bottom: 30px;
+        grid-row-start: 1;
+        grid-row-end: 2;
     }
 }

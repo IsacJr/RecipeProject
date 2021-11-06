@@ -4,49 +4,32 @@
 }
 
 .head-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.head-text {
-    margin-right: 2.0rem;
-
-}
-
-.head-img {
-    margin-left: 2.0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .head-status-info-item {
     margin-right: 18px;
 }
 
-.head-container-item {
-    flex: 1;
-    width: 50%;
-}
-
 .head-img-content {
     width: 100%;
-    max-width: 600px;
 }
 
 .head-status-difficulty {
     margin-left: 40px;
 }
 
-@media (max-width: 664px) {
+@media (max-width: 768px) {
     .head-container {
-        flex-direction: column-reverse;
+        grid-template-columns: 1fr;
     }
 
-    .head-container-item {
-        width: 100%;
+    .head-img {
+        grid-row-start: 1;
+        grid-row-end: 2;
     }
-
-    .head-text, .head-img {
-        margin: 0;
-        
-    }
+    
 
 }
