@@ -1,21 +1,21 @@
-<div class="contact-form-content d-flex align-items-center w-100 shadow">
-    <form [formGroup]="contactForm" (ngSubmit)="handleSubmit($event)">
+<div class="contact-form-content d-flex align-items-center justify-content-center h-100 shadow">
+    <form class="w-100" [formGroup]="contactForm" (ngSubmit)="handleSubmit($event)">
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
                 <label class="font-weight-normal">First name</label>
                 <input type="text" class="form-control" placeholder="Your first name" formControlName="firstName">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
                 <label class="font-weight-normal">Last name</label>
                 <input type="text" class="form-control" placeholder="Your last name" formControlName="lastName">
             </div>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
                 <label class="font-weight-normal">Email</label>
                 <input type="email" class="form-control" placeholder="Your email" formControlName="email">
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-12">
                 <label class="font-weight-normal">Phone number</label>
                 <input type="text" class="form-control" placeholder="Your phone number" formControlName="phoneNumber">
             </div>
