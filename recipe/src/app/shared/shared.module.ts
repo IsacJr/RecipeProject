@@ -11,32 +11,29 @@ import { ModalConfirmComponent } from './components/modal-confirm/modal-confirm.
 
 
 @NgModule({
-  declarations: [
-    TopNavbarComponent,
-    StarComponent,
-    CardComponent,
-    CardSimpleComponent,
-    FooterComponent,
-    ModalConfirmComponent
-  ],
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule
-  ],
-  exports: [
-    TopNavbarComponent,
-    StarComponent,
-    CardComponent,
-    CardSimpleComponent,
-    FooterComponent,
-    ModalConfirmComponent,
-    RouterModule
-  ],
-  entryComponents: [
-    ModalConfirmComponent
-  ]
+    declarations: [
+        TopNavbarComponent,
+        StarComponent,
+        CardComponent,
+        CardSimpleComponent,
+        FooterComponent,
+        ModalConfirmComponent
+    ],
+    imports: [
+        CommonModule,
+        FontAwesomeModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule
+    ],
+    exports: [
+        TopNavbarComponent,
+        StarComponent,
+        CardComponent,
+        CardSimpleComponent,
+        FooterComponent,
+        ModalConfirmComponent,
+        RouterModule
+    ]
 })
 export class SharedModule { }
